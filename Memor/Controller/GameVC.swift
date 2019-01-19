@@ -16,10 +16,15 @@ class GameVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var roundLabel: UILabel!
     @IBOutlet weak var timeSlider: GameTimerSlider!
+    @IBOutlet weak var timeParent: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         GameCV.delegate = self
+        
+        timeParent.layer.cornerRadius = 10
+        GameCV.layer.cornerRadius = 3
+        
         GameCV.set(size: Game.shared.level.size)
     }
     
