@@ -23,6 +23,12 @@
 		840793D721F3CA2D004751D5 /* MenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840793D621F3CA2D004751D5 /* MenuButton.swift */; };
 		840793D821F3CA2D004751D5 /* MenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840793D621F3CA2D004751D5 /* MenuButton.swift */; };
 		840793D921F3CA2D004751D5 /* MenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840793D621F3CA2D004751D5 /* MenuButton.swift */; };
+		840793DB21F3CCBF004751D5 /* AboutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840793DA21F3CCBF004751D5 /* AboutVC.swift */; };
+		840793DC21F3CCBF004751D5 /* AboutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840793DA21F3CCBF004751D5 /* AboutVC.swift */; };
+		840793DD21F3CCBF004751D5 /* AboutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840793DA21F3CCBF004751D5 /* AboutVC.swift */; };
+		840793DF21F3CCCC004751D5 /* GameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840793DE21F3CCCC004751D5 /* GameVC.swift */; };
+		840793E021F3CCCC004751D5 /* GameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840793DE21F3CCCC004751D5 /* GameVC.swift */; };
+		840793E121F3CCCC004751D5 /* GameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840793DE21F3CCCC004751D5 /* GameVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +65,8 @@
 		840793CD21F3C7DB004751D5 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		840793D221F3C81D004751D5 /* LevelGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelGenerator.swift; sourceTree = "<group>"; };
 		840793D621F3CA2D004751D5 /* MenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuButton.swift; sourceTree = "<group>"; };
+		840793DA21F3CCBF004751D5 /* AboutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutVC.swift; sourceTree = "<group>"; };
+		840793DE21F3CCCC004751D5 /* GameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +168,8 @@
 			children = (
 				8407939C21F3C51E004751D5 /* AppDelegate.swift */,
 				8407939E21F3C51E004751D5 /* MainVC.swift */,
+				840793DA21F3CCBF004751D5 /* AboutVC.swift */,
+				840793DE21F3CCCC004751D5 /* GameVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -305,7 +315,9 @@
 			files = (
 				8407939F21F3C51E004751D5 /* MainVC.swift in Sources */,
 				840793CE21F3C7DB004751D5 /* Game.swift in Sources */,
+				840793DB21F3CCBF004751D5 /* AboutVC.swift in Sources */,
 				840793D721F3CA2D004751D5 /* MenuButton.swift in Sources */,
+				840793DF21F3CCCC004751D5 /* GameVC.swift in Sources */,
 				840793D321F3C81D004751D5 /* LevelGenerator.swift in Sources */,
 				8407939D21F3C51E004751D5 /* AppDelegate.swift in Sources */,
 			);
@@ -316,8 +328,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				840793D821F3CA2D004751D5 /* MenuButton.swift in Sources */,
+				840793DC21F3CCBF004751D5 /* AboutVC.swift in Sources */,
 				840793B221F3C521004751D5 /* MemorTests.swift in Sources */,
 				840793D421F3C81D004751D5 /* LevelGenerator.swift in Sources */,
+				840793E021F3CCCC004751D5 /* GameVC.swift in Sources */,
 				840793CF21F3C7DB004751D5 /* Game.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -327,8 +341,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				840793D921F3CA2D004751D5 /* MenuButton.swift in Sources */,
+				840793DD21F3CCBF004751D5 /* AboutVC.swift in Sources */,
 				840793BD21F3C521004751D5 /* MemorUITests.swift in Sources */,
 				840793D521F3C81D004751D5 /* LevelGenerator.swift in Sources */,
+				840793E121F3CCCC004751D5 /* GameVC.swift in Sources */,
 				840793D021F3C7DB004751D5 /* Game.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
