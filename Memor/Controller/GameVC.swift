@@ -13,14 +13,24 @@ class GameVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
     
 
     @IBOutlet weak var GameCV: GameCollectionView!
-    
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var roundLabel: UILabel!
     @IBOutlet weak var timeSlider: GameTimerSlider!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         GameCV.delegate = self
         GameCV.set(size: Game.shared.level.size)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

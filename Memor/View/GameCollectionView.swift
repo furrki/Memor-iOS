@@ -22,7 +22,7 @@ class GameCollectionView: UICollectionView {
     }
     
     func set(size: Int){
-        let w = Int(frame.size.width - SPACING * CGFloat(size)) , h = Int(frame.size.height - SPACING * CGFloat(size))
+        let w = Int(frame.size.width - SPACING * CGFloat(size))-1 , h = Int(frame.size.height - SPACING * CGFloat(size))
         
         let cellSize = CGSize(width: (w) / size, height: (h ) / size)
         let layout = UICollectionViewFlowLayout()

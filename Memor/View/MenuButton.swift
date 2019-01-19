@@ -21,7 +21,7 @@ import UIKit
     }
     func custom(){
         layer.cornerRadius = 5.0
-        backgroundColor = #colorLiteral(red: 0.9647058824, green: 0.7254901961, blue: 0.231372549, alpha: 1) 
+        backgroundColor = #colorLiteral(red: 0.7843137255, green: 0.8392156863, blue: 0.8980392157, alpha: 1)
     }
    
 
