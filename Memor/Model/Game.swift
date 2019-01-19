@@ -12,8 +12,23 @@ class Game {
     static var shared = Game()
     
     var score = 0
-    var level = 0
+    var level: Level = Level(val: 3)
+    var contents: [Bool] = []
+    
     init(){
-        
+        setContents()
     }
+    
+    func setContents(){
+        contents = (0..<level.size * level.size).map({ _ in false })
+        
+        for _ in 0..<level.askCount {
+            var rand = (0..<contents.count).randomElement()!
+            while contents[rand] {
+                rand = (0..<contents.count).randomElement()!
+            }
+            contents[rand] = true
+        }
+    }
+    
 }

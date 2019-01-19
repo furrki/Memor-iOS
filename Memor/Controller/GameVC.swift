@@ -8,7 +8,9 @@
 
 import UIKit
 
-class GameVC: UIViewController {
+class GameVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    
 
     @IBOutlet weak var GameCV: GameCollectionView!
     
@@ -17,8 +19,25 @@ class GameVC: UIViewController {
     @IBOutlet weak var timeSlider: GameTimerSlider!
     override func viewDidLoad() {
         super.viewDidLoad()
- 
+        GameCV.delegate = self
+        GameCV.set(size: Game.shared.level.size)
     }
     
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return Game.shared.contents.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "gameCell", for: indexPath)
+        
+        if Game.shared.contents[indexPath.row] {
+            cell.backgroundColor = #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)
+        } else {
+            cell.backgroundColor = #colorLiteral(red: 0, green: 0.4784313725, blue: 1, alpha: 1)
+        }
+        
+        // Configure the cell
+        return cell
+    }
  
 }

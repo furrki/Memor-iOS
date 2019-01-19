@@ -10,7 +10,7 @@ import UIKit
 
 class GameCollectionView: UICollectionView {
     
-    let SPACING = 2
+    let SPACING = CGFloat(1.0)
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,16 +22,15 @@ class GameCollectionView: UICollectionView {
     }
     
     func set(size: Int){
-        let w = Int(frame.size.width), h = Int(frame.size.height)
+        let w = Int(frame.size.width - SPACING * CGFloat(size)) , h = Int(frame.size.height - SPACING * CGFloat(size))
         
-        let cellSize = CGSize(width: (w - size * SPACING) / size, height: (h - size * SPACING) / size)
-        
+        let cellSize = CGSize(width: (w) / size, height: (h ) / size)
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
         layout.itemSize = cellSize
-        layout.sectionInset = UIEdgeInsets(top: 1, left: 1, bottom: 1, right: 1)
+        layout.sectionInset = UIEdgeInsets(top: SPACING, left: SPACING, bottom: SPACING, right: SPACING)
         layout.minimumLineSpacing = 1.0
-        layout.minimumInteritemSpacing = 1.0
+        layout.minimumInteritemSpacing = 0.0
         self.setCollectionViewLayout(layout, animated: true)
         self.reloadData()
     }

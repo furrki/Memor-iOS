@@ -38,6 +38,12 @@
 		840793EB21F3D0EF004751D5 /* GameTimerSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840793EA21F3D0EF004751D5 /* GameTimerSlider.swift */; };
 		840793EC21F3D0EF004751D5 /* GameTimerSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840793EA21F3D0EF004751D5 /* GameTimerSlider.swift */; };
 		840793ED21F3D0EF004751D5 /* GameTimerSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840793EA21F3D0EF004751D5 /* GameTimerSlider.swift */; };
+		840793EF21F3D53E004751D5 /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840793EE21F3D53E004751D5 /* Level.swift */; };
+		840793F021F3D53E004751D5 /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840793EE21F3D53E004751D5 /* Level.swift */; };
+		840793F121F3D53E004751D5 /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840793EE21F3D53E004751D5 /* Level.swift */; };
+		840793F321F3D9C4004751D5 /* GlobalFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840793F221F3D9C4004751D5 /* GlobalFunctions.swift */; };
+		840793F421F3D9C4004751D5 /* GlobalFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840793F221F3D9C4004751D5 /* GlobalFunctions.swift */; };
+		840793F521F3D9C4004751D5 /* GlobalFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840793F221F3D9C4004751D5 /* GlobalFunctions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +85,8 @@
 		840793E221F3CF88004751D5 /* GameCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCollectionView.swift; sourceTree = "<group>"; };
 		840793E621F3CFA6004751D5 /* GameCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCollectionViewCell.swift; sourceTree = "<group>"; };
 		840793EA21F3D0EF004751D5 /* GameTimerSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTimerSlider.swift; sourceTree = "<group>"; };
+		840793EE21F3D53E004751D5 /* Level.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
+		840793F221F3D9C4004751D5 /* GlobalFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalFunctions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				840793CD21F3C7DB004751D5 /* Game.swift */,
+				840793EE21F3D53E004751D5 /* Level.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -193,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				840793D221F3C81D004751D5 /* LevelGenerator.swift */,
+				840793F221F3D9C4004751D5 /* GlobalFunctions.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -329,6 +339,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8407939F21F3C51E004751D5 /* MainVC.swift in Sources */,
+				840793EF21F3D53E004751D5 /* Level.swift in Sources */,
+				840793F321F3D9C4004751D5 /* GlobalFunctions.swift in Sources */,
 				840793CE21F3C7DB004751D5 /* Game.swift in Sources */,
 				840793EB21F3D0EF004751D5 /* GameTimerSlider.swift in Sources */,
 				840793DB21F3CCBF004751D5 /* AboutVC.swift in Sources */,
@@ -345,6 +357,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				840793F421F3D9C4004751D5 /* GlobalFunctions.swift in Sources */,
 				840793E821F3CFA6004751D5 /* GameCollectionViewCell.swift in Sources */,
 				840793E421F3CF88004751D5 /* GameCollectionView.swift in Sources */,
 				840793D821F3CA2D004751D5 /* MenuButton.swift in Sources */,
@@ -353,6 +366,7 @@
 				840793D421F3C81D004751D5 /* LevelGenerator.swift in Sources */,
 				840793E021F3CCCC004751D5 /* GameVC.swift in Sources */,
 				840793CF21F3C7DB004751D5 /* Game.swift in Sources */,
+				840793F021F3D53E004751D5 /* Level.swift in Sources */,
 				840793EC21F3D0EF004751D5 /* GameTimerSlider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -361,6 +375,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				840793F521F3D9C4004751D5 /* GlobalFunctions.swift in Sources */,
 				840793E921F3CFA6004751D5 /* GameCollectionViewCell.swift in Sources */,
 				840793E521F3CF88004751D5 /* GameCollectionView.swift in Sources */,
 				840793D921F3CA2D004751D5 /* MenuButton.swift in Sources */,
@@ -369,6 +384,7 @@
 				840793D521F3C81D004751D5 /* LevelGenerator.swift in Sources */,
 				840793E121F3CCCC004751D5 /* GameVC.swift in Sources */,
 				840793D021F3C7DB004751D5 /* Game.swift in Sources */,
+				840793F121F3D53E004751D5 /* Level.swift in Sources */,
 				840793ED21F3D0EF004751D5 /* GameTimerSlider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
