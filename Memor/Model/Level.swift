@@ -13,13 +13,18 @@ struct Level {
             return val + 2
     } // Will be squared
     
-    var askCount:Int {
+    var askCount: Int {
         return val + 2
     } // Singular
+    
+    var seconds: Double {
+        return Double(val * 5)
+    }
     
     init(val: Int){
         self.val = val
     }
+    
     func next() -> Level{
         return Level.init(val: self.val + 1)
     }

@@ -17,9 +17,6 @@
 		840793CE21F3C7DB004751D5 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840793CD21F3C7DB004751D5 /* Game.swift */; };
 		840793CF21F3C7DB004751D5 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840793CD21F3C7DB004751D5 /* Game.swift */; };
 		840793D021F3C7DB004751D5 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840793CD21F3C7DB004751D5 /* Game.swift */; };
-		840793D321F3C81D004751D5 /* LevelGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840793D221F3C81D004751D5 /* LevelGenerator.swift */; };
-		840793D421F3C81D004751D5 /* LevelGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840793D221F3C81D004751D5 /* LevelGenerator.swift */; };
-		840793D521F3C81D004751D5 /* LevelGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840793D221F3C81D004751D5 /* LevelGenerator.swift */; };
 		840793D721F3CA2D004751D5 /* MenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840793D621F3CA2D004751D5 /* MenuButton.swift */; };
 		840793D821F3CA2D004751D5 /* MenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840793D621F3CA2D004751D5 /* MenuButton.swift */; };
 		840793D921F3CA2D004751D5 /* MenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840793D621F3CA2D004751D5 /* MenuButton.swift */; };
@@ -78,7 +75,6 @@
 		840793BC21F3C521004751D5 /* MemorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemorUITests.swift; sourceTree = "<group>"; };
 		840793BE21F3C521004751D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		840793CD21F3C7DB004751D5 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
-		840793D221F3C81D004751D5 /* LevelGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelGenerator.swift; sourceTree = "<group>"; };
 		840793D621F3CA2D004751D5 /* MenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuButton.swift; sourceTree = "<group>"; };
 		840793DA21F3CCBF004751D5 /* AboutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutVC.swift; sourceTree = "<group>"; };
 		840793DE21F3CCCC004751D5 /* GameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameVC.swift; sourceTree = "<group>"; };
@@ -201,7 +197,6 @@
 		840793D121F3C80F004751D5 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				840793D221F3C81D004751D5 /* LevelGenerator.swift */,
 				840793F221F3D9C4004751D5 /* GlobalFunctions.swift */,
 			);
 			path = Utils;
@@ -348,7 +343,6 @@
 				840793E321F3CF88004751D5 /* GameCollectionView.swift in Sources */,
 				840793E721F3CFA6004751D5 /* GameCollectionViewCell.swift in Sources */,
 				840793DF21F3CCCC004751D5 /* GameVC.swift in Sources */,
-				840793D321F3C81D004751D5 /* LevelGenerator.swift in Sources */,
 				8407939D21F3C51E004751D5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -363,7 +357,6 @@
 				840793D821F3CA2D004751D5 /* MenuButton.swift in Sources */,
 				840793DC21F3CCBF004751D5 /* AboutVC.swift in Sources */,
 				840793B221F3C521004751D5 /* MemorTests.swift in Sources */,
-				840793D421F3C81D004751D5 /* LevelGenerator.swift in Sources */,
 				840793E021F3CCCC004751D5 /* GameVC.swift in Sources */,
 				840793CF21F3C7DB004751D5 /* Game.swift in Sources */,
 				840793F021F3D53E004751D5 /* Level.swift in Sources */,
@@ -381,7 +374,6 @@
 				840793D921F3CA2D004751D5 /* MenuButton.swift in Sources */,
 				840793DD21F3CCBF004751D5 /* AboutVC.swift in Sources */,
 				840793BD21F3C521004751D5 /* MemorUITests.swift in Sources */,
-				840793D521F3C81D004751D5 /* LevelGenerator.swift in Sources */,
 				840793E121F3CCCC004751D5 /* GameVC.swift in Sources */,
 				840793D021F3C7DB004751D5 /* Game.swift in Sources */,
 				840793F121F3D53E004751D5 /* Level.swift in Sources */,
