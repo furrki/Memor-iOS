@@ -1,5 +1,5 @@
 //
-//  GameVC.swift
+//  GameCollectionViewCell.swift
 //  Memor
 //
 //  Created by Admin on 20.01.2019.
@@ -8,12 +8,6 @@
 
 import UIKit
 
-class GameVC: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
- 
-    }
+class GameCollectionViewCell: UICollectionViewCell {
     
- 
 }
