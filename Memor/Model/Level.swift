@@ -20,6 +20,10 @@ struct Level {
     var seconds: Double {
         return Double(val * 5)
     }
+
+    var showSeconds: Double {
+        return Double(val * 2)
+    }
     
     init(val: Int){
         self.val = val

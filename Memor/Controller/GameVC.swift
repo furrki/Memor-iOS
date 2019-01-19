@@ -8,8 +8,7 @@
 
 import UIKit
 
-class GameVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
-    
+class GameVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, GameDelegate {
     
 
     @IBOutlet weak var GameCV: GameCollectionView!
@@ -21,6 +20,7 @@ class GameVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
     override func viewDidLoad() {
         super.viewDidLoad()
         GameCV.delegate = self
+        Game.shared.delegate = self
         
         timeParent.layer.cornerRadius = 10
         GameCV.layer.cornerRadius = 3
@@ -54,5 +54,20 @@ class GameVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
         // Configure the cell
         return cell
     }
- 
+    
+    func game(contents: [Bool]) {
+        GameCV.reloadData()
+    }
+    
+    func game(situation: GameSituation) {
+        switch situation {
+        case .show:
+            break
+        case .hide:
+            break
+        case .final:
+            break
+            
+        }
+    }
 }

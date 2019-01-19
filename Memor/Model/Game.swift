@@ -10,6 +10,7 @@ import Foundation
 
 class Game {
     static var shared = Game()
+    var delegate: GameDelegate?
     
     var score = 0
     var level: Level = Level(val: 3)
@@ -31,11 +32,18 @@ class Game {
             }
             contents[rand] = true
         }
+        delegate?.game(contents: contents)
         situation = .show
+        delegate?.game(situation: situation)
     }
     
 }
 
 enum GameSituation {
     case show, hide, final
+}
+
+protocol GameDelegate {
+    func game(contents: [Bool])
+    func game(situation: GameSituation)
 }
