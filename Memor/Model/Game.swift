@@ -13,13 +13,28 @@ class Game {
     var delegate: GameDelegate?
     
     var score = 0
+    var life = 5
     var level: Level = Level(val: 3)
     var contents: [Bool] = []
-    var situation: GameSituation = .show
+    var toucheds: [Int] = []
+    var situation: GameSituation = .show {
+        didSet {
+            delegate?.game(situation: situation)
+        }
+    }
     
     
     init(){
+        
+    }
+    
+    func initialize(){
         setContents()
+        toucheds = []
+        situation = .show
+        let _ = setTimeout(delay: level.showSeconds) {
+            self.situation = .hide
+        }
     }
     
     func setContents(){
@@ -33,10 +48,16 @@ class Game {
             contents[rand] = true
         }
         delegate?.game(contents: contents)
-        situation = .show
-        delegate?.game(situation: situation)
     }
     
+    func click(on: Int) -> Bool{
+        if situation == .hide && !toucheds.contains(on){
+            toucheds.append(on)
+            let success = contents[on]
+            return success
+        }
+        return false
+    }
 }
 
 enum GameSituation {

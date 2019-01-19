@@ -15,7 +15,12 @@ class GameCollectionViewCell: UICollectionViewCell {
         .success : #colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1),
         .error: #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)
     ]
-    var type: GameCellType = .hidden
+    var type: GameCellType = .hidden {
+        didSet { 
+            contentView.backgroundColor = colors[type]
+            contentView.layoutIfNeeded()
+        }
+    }
 
     override func awakeFromNib() {
         super.awakeFromNib()

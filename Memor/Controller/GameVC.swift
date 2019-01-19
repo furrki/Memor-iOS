@@ -26,6 +26,7 @@ class GameVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
         GameCV.layer.cornerRadius = 3
         
         GameCV.set(size: Game.shared.level.size)
+        Game.shared.initialize()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -43,18 +44,20 @@ class GameVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "gameCell", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "gameCell", for: indexPath) as! GameCollectionViewCell
         switch Game.shared.situation {
         case .show:
             if Game.shared.contents[indexPath.row] {
-                cell.backgroundColor = #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)
+                cell.type = .show
             } else {
-                cell.backgroundColor = #colorLiteral(red: 0, green: 0.4784313725, blue: 1, alpha: 1)
+                cell.type = .hidden
             }
             break
         case .hide:
+            
             break
         case .final:
+            
             break
         }
        
@@ -62,7 +65,9 @@ class GameVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        <#code#>
+        if Game.shared.situation == .hide {
+            let success = Game.shared.click(on: indexPath.row)
+        }
     }
     
     func game(contents: [Bool]) {
