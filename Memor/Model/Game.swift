@@ -14,6 +14,8 @@ class Game {
     var score = 0
     var level: Level = Level(val: 3)
     var contents: [Bool] = []
+    var situation: GameSituation = .show
+    
     
     init(){
         setContents()
@@ -29,6 +31,11 @@ class Game {
             }
             contents[rand] = true
         }
+        situation = .show
     }
     
+}
+
+enum GameSituation {
+    case show, hide, final
 }
