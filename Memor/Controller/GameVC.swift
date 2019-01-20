@@ -9,13 +9,8 @@
 import UIKit
 
 class GameVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, GameDelegate {
-    
-    
-    
-    
-    
+
     @IBOutlet weak var livesStack: UIStackView!
-    
     @IBOutlet weak var GameCV: GameCollectionView!
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var roundLabel: UILabel!

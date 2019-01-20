@@ -10,19 +10,19 @@ import Foundation
 struct Level {
     var val: Int
     var size: Int {
-            return val + 2
+            return val / 4 + 2
     } // Will be squared
     
     var askCount: Int {
-        return (val + 2) / 2 + 1
+        return size + (val % 4) - 1
     } // Singular
     
     var seconds: Double {
-        return Double(val + 2)
+        return Double(size)
     }
 
     var showSeconds: Double {
-        return Double(val)
+        return Double(size) / 3.0
     }
     
     init(val: Int){

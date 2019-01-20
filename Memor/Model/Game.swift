@@ -13,7 +13,7 @@ class Game {
     var delegate: GameDelegate?
     
     let RESOLUTION = 0.01
-    let finalShowTime = 4.0
+    let finalShowTime = 1.5
     
     
     var score = 0 {
