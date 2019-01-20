@@ -60,7 +60,7 @@ class Game {
         
         toucheds = []
         situation = .show
-        timeLeft = level.seconds 
+        timeLeft = level.seconds
         delegate?.game(score: score, level: level.val, lives: lives)
         let _ = setTimeout(delay: level.showSeconds) {
             self.startLevel()
@@ -82,7 +82,7 @@ class Game {
         }
     }
     
-    @objc func updateTimer() {
+    @objc func updateTimer(){
         if timeLeft > 0.0 {
             timeLeft -= RESOLUTION
             delegate?.game(time: timeLeft)
@@ -98,10 +98,22 @@ class Game {
             if success {
                 score += 5
                 if checkFinished() {
-                    finishLevel()
+                    self.situation = .final
+                    timer?.invalidate()
+                    let _ = setTimeout(delay: finalShowTime) {
+                        self.level = self.level.next()
+                        self.initLevel()
+                    }
                 }
             } else {
                 lives -= 1
+                if checkDead() {
+                   finishLevel()
+                    
+                   let _ = setTimeout(delay: finalShowTime) {
+                        self.delegate?.gameDead()
+                   }
+                }
             }
             return success
         }
@@ -116,6 +128,12 @@ class Game {
         }
         return true
     }
+    func checkDead() -> Bool{
+        if lives < 0 {
+            return true
+        }
+        return false
+    }
 }
 
 enum GameSituation {
@@ -127,4 +145,5 @@ protocol GameDelegate {
     func game(situation: GameSituation)
     func game(time: Double)
     func game(score: Int, level: Int, lives: Int)
+    func gameDead()
 }

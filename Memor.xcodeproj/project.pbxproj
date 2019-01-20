@@ -41,6 +41,9 @@
 		840793F321F3D9C4004751D5 /* GlobalFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840793F221F3D9C4004751D5 /* GlobalFunctions.swift */; };
 		840793F421F3D9C4004751D5 /* GlobalFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840793F221F3D9C4004751D5 /* GlobalFunctions.swift */; };
 		840793F521F3D9C4004751D5 /* GlobalFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840793F221F3D9C4004751D5 /* GlobalFunctions.swift */; };
+		840793F821F49104004751D5 /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840793F721F49104004751D5 /* ViewExtensions.swift */; };
+		840793F921F49104004751D5 /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840793F721F49104004751D5 /* ViewExtensions.swift */; };
+		840793FA21F49104004751D5 /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840793F721F49104004751D5 /* ViewExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +86,7 @@
 		840793EA21F3D0EF004751D5 /* GameTimerSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTimerSlider.swift; sourceTree = "<group>"; };
 		840793EE21F3D53E004751D5 /* Level.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
 		840793F221F3D9C4004751D5 /* GlobalFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalFunctions.swift; sourceTree = "<group>"; };
+		840793F721F49104004751D5 /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +137,7 @@
 		8407939B21F3C51E004751D5 /* Memor */ = {
 			isa = PBXGroup;
 			children = (
+				840793F621F490EA004751D5 /* Extension */,
 				840793D121F3C80F004751D5 /* Utils */,
 				840793CC21F3C78A004751D5 /* Controller */,
 				840793CB21F3C781004751D5 /* View */,
@@ -200,6 +205,14 @@
 				840793F221F3D9C4004751D5 /* GlobalFunctions.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		840793F621F490EA004751D5 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				840793F721F49104004751D5 /* ViewExtensions.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -343,6 +356,7 @@
 				840793E321F3CF88004751D5 /* GameCollectionView.swift in Sources */,
 				840793E721F3CFA6004751D5 /* GameCollectionViewCell.swift in Sources */,
 				840793DF21F3CCCC004751D5 /* GameVC.swift in Sources */,
+				840793F821F49104004751D5 /* ViewExtensions.swift in Sources */,
 				8407939D21F3C51E004751D5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -351,6 +365,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				840793F921F49104004751D5 /* ViewExtensions.swift in Sources */,
 				840793F421F3D9C4004751D5 /* GlobalFunctions.swift in Sources */,
 				840793E821F3CFA6004751D5 /* GameCollectionViewCell.swift in Sources */,
 				840793E421F3CF88004751D5 /* GameCollectionView.swift in Sources */,
@@ -368,6 +383,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				840793FA21F49104004751D5 /* ViewExtensions.swift in Sources */,
 				840793F521F3D9C4004751D5 /* GlobalFunctions.swift in Sources */,
 				840793E921F3CFA6004751D5 /* GameCollectionViewCell.swift in Sources */,
 				840793E521F3CF88004751D5 /* GameCollectionView.swift in Sources */,

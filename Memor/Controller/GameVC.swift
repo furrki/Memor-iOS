@@ -139,5 +139,10 @@ class GameVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
         }
         livesStack.layoutSubviews()
     }
+    func gameDead() {
+        toast(message: "Game Over!")
+        Game.shared = Game()
+        self.dismiss(animated: true, completion: nil)
+    }
 }
 
