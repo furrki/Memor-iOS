@@ -65,6 +65,7 @@
                             <constraint firstItem="q8l-C0-10W" firstAttribute="top" secondItem="qII-hZ-cgw" secondAttribute="bottom" constant="106.5" id="60o-xl-syc"/>
                             <constraint firstItem="q8l-C0-10W" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Peh-fe-IaM"/>
                             <constraint firstItem="qII-hZ-cgw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="njM-Za-hjX"/>
+                            <constraint firstItem="qII-hZ-cgw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="69" id="vt3-W8-ddL"/>
                             <constraint firstItem="q8l-C0-10W" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="wpH-4V-Xk0"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -257,14 +258,118 @@
                     <view key="view" contentMode="scaleToFill" id="w5X-3Z-53s">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QTd-Uh-bQ1">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How To Play?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UeV-Sc-M45">
+                                        <rect key="frame" x="8" y="97" width="359" height="38"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="38" id="riW-3j-uiC"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="17"/>
+                                        <color key="textColor" red="0.7843137255" green="0.83921568629999999" blue="0.8980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="GNc-K4-EdD">
+                                        <rect key="frame" x="8" y="135" width="359" height="97"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="97" id="qfW-z0-8CT"/>
+                                        </constraints>
+                                        <string key="text">When you start a level, you will see the board for a moment. Then they will disappear. You are expected to tap on shown squares before.</string>
+                                        <color key="textColor" red="0.7843137255" green="0.83921568629999999" blue="0.8980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How can you lose?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rbe-gN-gJO">
+                                        <rect key="frame" x="8" y="254" width="359" height="38"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="38" id="VYJ-uV-jpc"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="17"/>
+                                        <color key="textColor" red="0.7843137255" green="0.83921568629999999" blue="0.8980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Ibv-52-NO1">
+                                        <rect key="frame" x="8" y="294" width="359" height="142"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="142" id="Tq0-XQ-3bH"/>
+                                        </constraints>
+                                        <string key="text">If you tap on any unshown squeares, you will lose a life. If the time ends before you tap all of shown squares, you will lose a life too. When you lose all your lives, the game will end automatically.</string>
+                                        <color key="textColor" red="0.7843137255" green="0.83921568629999999" blue="0.8980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="furkankaynary@gmail.com" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n7T-xa-jz7">
+                                        <rect key="frame" x="8" y="496" width="359" height="38"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <accessibilityTraits key="traits" link="YES" staticText="YES"/>
+                                        </accessibility>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="38" id="o9v-N5-MYd"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="15"/>
+                                        <color key="textColor" red="0.7843137255" green="0.83921568629999999" blue="0.8980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Memor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R1U-TP-nNX">
+                                        <rect key="frame" x="120" y="25" width="135" height="43"/>
+                                        <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="35"/>
+                                        <color key="textColor" red="0.7843137255" green="0.83921568629999999" blue="0.8980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contact Me!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d1Y-1j-WVF">
+                                        <rect key="frame" x="8" y="459" width="359" height="38"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="38" id="wUG-Jk-wW5"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="17"/>
+                                        <color key="textColor" red="0.7843137255" green="0.83921568629999999" blue="0.8980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Ibv-52-NO1" firstAttribute="leading" secondItem="d1Y-1j-WVF" secondAttribute="leading" id="0Oa-dF-QZD"/>
+                                    <constraint firstItem="Ibv-52-NO1" firstAttribute="trailing" secondItem="d1Y-1j-WVF" secondAttribute="trailing" id="2Bv-kg-4f8"/>
+                                    <constraint firstItem="Ibv-52-NO1" firstAttribute="top" secondItem="Rbe-gN-gJO" secondAttribute="bottom" constant="2" id="3so-H5-7rt"/>
+                                    <constraint firstAttribute="bottom" secondItem="n7T-xa-jz7" secondAttribute="bottom" constant="69" id="5SI-Ik-iec"/>
+                                    <constraint firstItem="GNc-K4-EdD" firstAttribute="top" secondItem="UeV-Sc-M45" secondAttribute="bottom" id="767-nj-AJc"/>
+                                    <constraint firstItem="R1U-TP-nNX" firstAttribute="top" secondItem="QTd-Uh-bQ1" secondAttribute="top" constant="25" id="8V6-FW-p8h"/>
+                                    <constraint firstItem="UeV-Sc-M45" firstAttribute="leading" secondItem="GNc-K4-EdD" secondAttribute="leading" id="8YM-j9-QIb"/>
+                                    <constraint firstItem="n7T-xa-jz7" firstAttribute="top" secondItem="d1Y-1j-WVF" secondAttribute="bottom" constant="-1" id="8ko-5z-r3V"/>
+                                    <constraint firstItem="R1U-TP-nNX" firstAttribute="centerX" secondItem="UeV-Sc-M45" secondAttribute="centerX" id="95w-tY-Oat"/>
+                                    <constraint firstItem="GNc-K4-EdD" firstAttribute="leading" secondItem="Rbe-gN-gJO" secondAttribute="leading" id="9Ad-jQ-2fh"/>
+                                    <constraint firstItem="UeV-Sc-M45" firstAttribute="trailing" secondItem="GNc-K4-EdD" secondAttribute="trailing" id="Guq-Lb-mtG"/>
+                                    <constraint firstItem="GNc-K4-EdD" firstAttribute="trailing" secondItem="Rbe-gN-gJO" secondAttribute="trailing" id="LoO-5g-7GM"/>
+                                    <constraint firstItem="Rbe-gN-gJO" firstAttribute="trailing" secondItem="Ibv-52-NO1" secondAttribute="trailing" id="MMA-SO-1xk"/>
+                                    <constraint firstItem="d1Y-1j-WVF" firstAttribute="trailing" secondItem="n7T-xa-jz7" secondAttribute="trailing" id="aBr-LW-iLd"/>
+                                    <constraint firstItem="UeV-Sc-M45" firstAttribute="leading" secondItem="QTd-Uh-bQ1" secondAttribute="leadingMargin" id="cZA-SU-EHG"/>
+                                    <constraint firstItem="Rbe-gN-gJO" firstAttribute="leading" secondItem="Ibv-52-NO1" secondAttribute="leading" id="hI6-CN-vS2"/>
+                                    <constraint firstItem="d1Y-1j-WVF" firstAttribute="top" secondItem="Ibv-52-NO1" secondAttribute="bottom" constant="23" id="mcZ-cE-Hfw"/>
+                                    <constraint firstItem="UeV-Sc-M45" firstAttribute="trailing" secondItem="QTd-Uh-bQ1" secondAttribute="trailingMargin" id="mce-0G-SsS"/>
+                                    <constraint firstItem="Rbe-gN-gJO" firstAttribute="top" secondItem="GNc-K4-EdD" secondAttribute="bottom" constant="22" id="tdF-rT-QFP"/>
+                                    <constraint firstItem="UeV-Sc-M45" firstAttribute="top" secondItem="R1U-TP-nNX" secondAttribute="bottom" constant="29" id="vAy-ZX-RHI"/>
+                                    <constraint firstItem="d1Y-1j-WVF" firstAttribute="leading" secondItem="n7T-xa-jz7" secondAttribute="leading" id="xsA-WK-HnC"/>
+                                    <constraint firstItem="R1U-TP-nNX" firstAttribute="centerX" secondItem="QTd-Uh-bQ1" secondAttribute="centerX" id="yIv-GX-gcf"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" red="0.1843137255" green="0.20784313730000001" blue="0.25882352939999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="QTd-Uh-bQ1" firstAttribute="leading" secondItem="MR5-gc-fFm" secondAttribute="leading" id="Gcc-ea-deg"/>
+                            <constraint firstItem="QTd-Uh-bQ1" firstAttribute="bottom" secondItem="MR5-gc-fFm" secondAttribute="bottom" id="fdy-tq-1KO"/>
+                            <constraint firstItem="QTd-Uh-bQ1" firstAttribute="trailing" secondItem="MR5-gc-fFm" secondAttribute="trailing" id="s1m-ql-NsN"/>
+                            <constraint firstItem="QTd-Uh-bQ1" firstAttribute="top" secondItem="MR5-gc-fFm" secondAttribute="top" id="uvV-Pf-xL9"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="MR5-gc-fFm"/>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QoN-TD-SQT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1073" y="879"/>
+            <point key="canvasLocation" x="1072.8" y="878.41079460269873"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="LDk-bb-8Lx">
