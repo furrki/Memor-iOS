@@ -76,7 +76,7 @@ class GameVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
                 }
             } else {
                 if Game.shared.contents[indexPath.row] {
-                    cell.type = .success
+                    cell.type = .show
                 } else {
                     cell.type = .hidden
                 }
@@ -116,5 +116,9 @@ class GameVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
     }
     func game(time: Double) {
         timeSlider.value = Float(time)
+    }
+    func updateLabels(){
+        roundLabel.text = String(Game.shared.level.val)
+        scoreLabel.text = String(Game.shared.score)
     }
 }

@@ -14,11 +14,11 @@ struct Level {
     } // Will be squared
     
     var askCount: Int {
-        return val + 2
+        return (val + 2) / 2 + 1
     } // Singular
     
     var seconds: Double {
-        return Double(val * 4)
+        return Double(val + 2)
     }
 
     var showSeconds: Double {
