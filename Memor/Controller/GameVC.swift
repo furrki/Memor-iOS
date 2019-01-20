@@ -29,7 +29,7 @@ class GameVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
         GameCV.layer.cornerRadius = 3
         
         GameCV.set(size: Game.shared.level.size)
-        Game.shared.initialize()
+        Game.shared.initLevel()
     }
     
     override func viewWillAppear(_ animated: Bool) {

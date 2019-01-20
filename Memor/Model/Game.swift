@@ -35,8 +35,7 @@ class Game {
         
     }
     
-    func initialize(){
-        
+    func initLevel(){
         contents = (0..<level.size * level.size).map({ _ in false })
         for _ in 0..<level.askCount {
             var rand = (0..<contents.count).randomElement()!
@@ -61,17 +60,21 @@ class Game {
         delegate?.game(time: timeLeft)
     }
     
+    func finishLevel(){
+        self.situation = .final
+        timer?.invalidate()
+        let _ = setTimeout(delay: finalShowTime) {
+            self.level = self.level.next()
+            self.initLevel()
+        }
+    }
+    
     @objc func updateTimer() {
         if timeLeft > 0.0 {
             timeLeft -= RESOLUTION
             delegate?.game(time: timeLeft)
         } else {
-            self.situation = .final
-            timer?.invalidate()
-            let _ = setTimeout(delay: finalShowTime) {
-                self.level = self.level.next()
-                self.initialize()
-            }
+            finishLevel()
         }
     }
     
@@ -79,9 +82,24 @@ class Game {
         if situation == .hide && !toucheds.contains(on){
             toucheds.append(on)
             let success = contents[on]
+            if success {
+                score += 5
+                if checkFinished() {
+                    finishLevel()
+                }
+            }
             return success
         }
         return false
+    }
+    
+    func checkFinished() -> Bool{
+        for (i, c) in contents.enumerated() {
+            if c && !toucheds.contains(i) {
+                return false
+            }
+        }
+        return true
     }
 }
 
