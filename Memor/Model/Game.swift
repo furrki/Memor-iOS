@@ -87,7 +87,12 @@ class Game {
             timeLeft -= RESOLUTION
             delegate?.game(time: timeLeft)
         } else {
-            finishLevel()
+            lives -= 1
+            if checkDead() {
+                endGame()
+            } else {
+                finishLevel()
+            }
         }
     }
     
@@ -98,21 +103,12 @@ class Game {
             if success {
                 score += 5
                 if checkFinished() {
-                    self.situation = .final
-                    timer?.invalidate()
-                    let _ = setTimeout(delay: finalShowTime) {
-                        self.level = self.level.next()
-                        self.initLevel()
-                    }
+                    finishLevel()
                 }
             } else {
                 lives -= 1
                 if checkDead() {
-                   finishLevel()
-                    self.delegate?.gameDead(shown: false)
-                   let _ = setTimeout(delay: finalShowTime) {
-                    self.delegate?.gameDead(shown: true)
-                   }
+                  endGame()
                 }
             }
             return success
@@ -128,11 +124,20 @@ class Game {
         }
         return true
     }
+    
     func checkDead() -> Bool{
         if lives < 0 {
             return true
         }
         return false
+    }
+    
+    func endGame() {
+        finishLevel()
+        self.delegate?.gameDead(shown: false)
+        let _ = setTimeout(delay: finalShowTime) {
+            self.delegate?.gameDead(shown: true)
+        }
     }
 }
 
