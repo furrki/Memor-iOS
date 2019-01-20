@@ -15,7 +15,11 @@ git clone https://github.com/furrki/Memor-iOS
 ``` 
 
 # ScreenShots  
-<img src="screenshots/ss1.jpeg?raw=true" width="200"> 
+<img src="screenshots/ss1.jpeg?raw=true" width="300"> 
+<img src="screenshots/ss2.jpeg?raw=true" width="300"> 
+<img src="screenshots/ss3.jpeg?raw=true" width="300"> 
+<img src="screenshots/ss4.jpeg?raw=true" width="300"> 
+<img src="screenshots/ss5.jpeg?raw=true" width="300"> 
 
 # Author
 furrki --> furkankaynary@gmail.com
