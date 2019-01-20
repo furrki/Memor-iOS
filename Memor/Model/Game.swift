@@ -109,9 +109,9 @@ class Game {
                 lives -= 1
                 if checkDead() {
                    finishLevel()
-                    
+                    self.delegate?.gameDead(shown: false)
                    let _ = setTimeout(delay: finalShowTime) {
-                        self.delegate?.gameDead()
+                    self.delegate?.gameDead(shown: true)
                    }
                 }
             }
@@ -145,5 +145,5 @@ protocol GameDelegate {
     func game(situation: GameSituation)
     func game(time: Double)
     func game(score: Int, level: Int, lives: Int)
-    func gameDead()
+    func gameDead(shown: Bool)
 }
