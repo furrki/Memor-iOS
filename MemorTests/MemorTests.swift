@@ -23,6 +23,19 @@ class MemorTests: XCTestCase {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
+    
+    func testLevels() {
+            var level = Level(val: 4)
+            XCTAssertEqual(level.size, 3)
+            XCTAssertEqual(level.askCount, 2)
+            XCTAssertEqual(level.seconds, 3.0)
+        
+            level = Level(val: 100)
+            XCTAssertEqual(level.size, 27)
+            XCTAssertEqual(level.askCount, 26)
+            XCTAssertEqual(level.seconds, 27.0)
+        
+    }
 
     func testPerformanceExample() {
         // This is an example of a performance test case.
