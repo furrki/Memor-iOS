@@ -18,11 +18,11 @@ struct Level {
     } // Singular
     
     var seconds: Double {
-        return Double(val * 5)
+        return Double(val * 4)
     }
 
     var showSeconds: Double {
-        return Double(val * 2)
+        return Double(val)
     }
     
     init(val: Int){

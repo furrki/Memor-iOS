@@ -10,12 +10,15 @@ import UIKit
 
 class GameVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, GameDelegate {
     
+    
+    
 
     @IBOutlet weak var GameCV: GameCollectionView!
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var roundLabel: UILabel!
     @IBOutlet weak var timeSlider: GameTimerSlider!
     @IBOutlet weak var timeParent: UIView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,7 +68,19 @@ class GameVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
             }
             break
         case .final:
-            
+            if Game.shared.toucheds.contains(indexPath.row) {
+                if Game.shared.contents[indexPath.row] {
+                    cell.type = .success
+                } else {
+                    cell.type = .error
+                }
+            } else {
+                if Game.shared.contents[indexPath.row] {
+                    cell.type = .success
+                } else {
+                    cell.type = .hidden
+                }
+            }
             break
         }
        
@@ -87,6 +102,10 @@ class GameVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
         GameCV.reloadData()
         switch situation {
         case .show:
+            timeSlider.maximumValue = Float(Game.shared.level.seconds)
+            timeSlider.minimumValue = 0.0
+            timeSlider.value = Float(Game.shared.level.seconds)
+            GameCV.set(size: Game.shared.level.size)
             break
         case .hide:
             break
@@ -95,7 +114,7 @@ class GameVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
             
         }
     }
-    func initializeLevel(){
-        
+    func game(time: Double) {
+        timeSlider.value = Float(time)
     }
 }
