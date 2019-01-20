@@ -16,9 +16,21 @@ class Game {
     let finalShowTime = 4.0
     
     
-    var score = 0
-    var life = 5
-    var level: Level = Level(val: 1)
+    var score = 0 {
+        didSet {
+            delegate?.game(score: score, level: level.val, lives: lives)
+        }
+    }
+    var lives = 5 {
+        didSet {
+            delegate?.game(score: score, level: level.val, lives: lives)
+        }
+    }
+    var level: Level = Level(val: 1) {
+        didSet {
+            delegate?.game(score: score, level: level.val, lives: lives)
+        }
+    }
     var contents: [Bool] = []
     var toucheds: [Int] = []
     var timeLeft = 0.0
@@ -111,4 +123,5 @@ protocol GameDelegate {
     func game(contents: [Bool])
     func game(situation: GameSituation)
     func game(time: Double)
+    func game(score: Int, level: Int, lives: Int)
 }

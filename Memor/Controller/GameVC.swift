@@ -12,6 +12,8 @@ class GameVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
     
     
     
+    
+    
 
     @IBOutlet weak var GameCV: GameCollectionView!
     @IBOutlet weak var scoreLabel: UILabel!
@@ -117,8 +119,8 @@ class GameVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
     func game(time: Double) {
         timeSlider.value = Float(time)
     }
-    func updateLabels(){
-        roundLabel.text = String(Game.shared.level.val)
-        scoreLabel.text = String(Game.shared.score)
+    func game(score: Int, level: Int, lives: Int) {
+        roundLabel.text = String(level)
+        scoreLabel.text = String(score)
     }
 }
