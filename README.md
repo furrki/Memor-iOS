@@ -15,11 +15,7 @@ git clone https://github.com/furrki/Memor-iOS
 ``` 
 
 # ScreenShots  
-![Alt text](screenshots/ss1.jpeg?raw=true "Main Screen"  | width=200) 
-![Alt text](screenshots/ss2.jpeg?raw=true "Main Screen 2"){: width="200px"}
-![Alt text](screenshots/ss3.jpeg?raw=true "Main Screen 3"){: width="200px"}
-![Alt text](screenshots/ss4.jpeg?raw=true "Main Screen 4"){: width="200px"}
-![Alt text](screenshots/ss5.jpeg?raw=true "Main Screen 5"){: width="200px"}
+<img src="screenshots/ss1.jpeg?raw=true" width="200"> 
 
 # Author
 furrki --> furkankaynary@gmail.com
