@@ -14,7 +14,8 @@ class GameVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
     
     
     
-
+    @IBOutlet weak var livesStack: UIStackView!
+    
     @IBOutlet weak var GameCV: GameCollectionView!
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var roundLabel: UILabel!
@@ -85,7 +86,7 @@ class GameVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
             }
             break
         }
-       
+        
         
         return cell
     }
@@ -116,11 +117,27 @@ class GameVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
             
         }
     }
+    
     func game(time: Double) {
         timeSlider.value = Float(time)
     }
+    
     func game(score: Int, level: Int, lives: Int) {
         roundLabel.text = String(level)
         scoreLabel.text = String(score)
+        let _ = livesStack.subviews.map({ v in v.removeFromSuperview() })
+        
+        let w = livesStack.frame.width
+        let lw = ((w - 5) / 5)
+        if lives >= 0 {
+            for i in 0..<lives {
+                let heartImage = UIImageView(image: UIImage(named: "heart")!)
+                heartImage.frame = CGRect(x: CGFloat(i) * lw + 5, y: 0, width: lw, height: 50)
+                heartImage.contentMode = .scaleAspectFit
+                livesStack.addSubview(heartImage)
+            }
+        }
+        livesStack.layoutSubviews()
     }
 }
+

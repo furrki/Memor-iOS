@@ -60,7 +60,8 @@ class Game {
         
         toucheds = []
         situation = .show
-        timeLeft = level.seconds
+        timeLeft = level.seconds 
+        delegate?.game(score: score, level: level.val, lives: lives)
         let _ = setTimeout(delay: level.showSeconds) {
             self.startLevel()
         }
@@ -99,6 +100,8 @@ class Game {
                 if checkFinished() {
                     finishLevel()
                 }
+            } else {
+                lives -= 1
             }
             return success
         }

@@ -84,6 +84,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ERk-wW-rMZ" customClass="GameCollectionView" customModule="Memor" customModuleProvider="target">
+                                <rect key="frame" x="20" y="90" width="335" height="336"/>
+                                <color key="backgroundColor" red="0.78431372549019607" green="0.83921568627450982" blue="0.89803921568627454" alpha="0.90000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="336" id="Ou4-By-3CG"/>
+                                    <constraint firstAttribute="width" constant="335" id="Ppy-5P-D1i"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="6q4-53-xjL">
+                                    <size key="itemSize" width="110" height="110"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="gameCell" id="xmf-r5-ARo" customClass="GameCollectionViewCell" customModule="Memor" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="110" height="110"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="110" height="110"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="2J4-Y4-eeZ" id="I6b-JO-ggx"/>
+                                    <outlet property="delegate" destination="2J4-Y4-eeZ" id="n8N-Z7-trE"/>
+                                </connections>
+                            </collectionView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XVn-L3-C8Q">
                                 <rect key="frame" x="20" y="464" width="335" height="70"/>
                                 <subviews>
@@ -177,43 +205,33 @@
                                     <constraint firstItem="nCi-Dp-1XU" firstAttribute="leading" secondItem="8Ny-WW-qhh" secondAttribute="leading" id="ulT-gg-DPm"/>
                                 </constraints>
                             </view>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ERk-wW-rMZ" customClass="GameCollectionView" customModule="Memor" customModuleProvider="target">
-                                <rect key="frame" x="20" y="90" width="335" height="336"/>
-                                <color key="backgroundColor" red="0.78431372549019607" green="0.83921568627450982" blue="0.89803921568627454" alpha="0.90000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="TLJ-6w-XTo">
+                                <rect key="frame" x="20" y="597" width="335" height="50"/>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Memor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mc8-VG-XRx">
+                                <rect key="frame" x="120" y="39" width="135" height="43"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="336" id="Ou4-By-3CG"/>
-                                    <constraint firstAttribute="width" constant="335" id="Ppy-5P-D1i"/>
+                                    <constraint firstAttribute="width" constant="135" id="jcJ-WZ-cxB"/>
                                 </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="6q4-53-xjL">
-                                    <size key="itemSize" width="110" height="110"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="gameCell" id="xmf-r5-ARo" customClass="GameCollectionViewCell" customModule="Memor" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="110" height="110"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="110" height="110"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </view>
-                                    </collectionViewCell>
-                                </cells>
-                                <connections>
-                                    <outlet property="dataSource" destination="2J4-Y4-eeZ" id="I6b-JO-ggx"/>
-                                    <outlet property="delegate" destination="2J4-Y4-eeZ" id="n8N-Z7-trE"/>
-                                </connections>
-                            </collectionView>
+                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="35"/>
+                                <color key="textColor" red="0.7843137255" green="0.83921568629999999" blue="0.8980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.18431372549019609" green="0.20784313725490194" blue="0.25882352941176467" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="XVn-L3-C8Q" firstAttribute="centerX" secondItem="8Ny-WW-qhh" secondAttribute="centerX" id="70l-Bc-NiG"/>
+                            <constraint firstAttribute="bottom" secondItem="TLJ-6w-XTo" secondAttribute="bottom" constant="20" symbolic="YES" id="AY4-7I-3bh"/>
                             <constraint firstItem="XVn-L3-C8Q" firstAttribute="top" secondItem="ERk-wW-rMZ" secondAttribute="bottom" constant="38" id="BhV-DF-pyL"/>
+                            <constraint firstItem="mc8-VG-XRx" firstAttribute="centerX" secondItem="DrK-Xi-Ht6" secondAttribute="centerX" id="H8i-GF-8xY"/>
+                            <constraint firstItem="TLJ-6w-XTo" firstAttribute="trailing" secondItem="XVn-L3-C8Q" secondAttribute="trailing" id="MA8-ia-yjy"/>
                             <constraint firstItem="ERk-wW-rMZ" firstAttribute="trailing" secondItem="XVn-L3-C8Q" secondAttribute="trailing" id="Nui-qm-ski"/>
                             <constraint firstItem="8Ny-WW-qhh" firstAttribute="centerX" secondItem="DrK-Xi-Ht6" secondAttribute="centerX" id="OZ4-YL-ypW"/>
-                            <constraint firstItem="ERk-wW-rMZ" firstAttribute="top" secondItem="1mH-AJ-LHn" secondAttribute="top" constant="70" id="VTX-cm-mSq"/>
+                            <constraint firstItem="TLJ-6w-XTo" firstAttribute="leading" secondItem="XVn-L3-C8Q" secondAttribute="leading" id="Y39-ks-O2B"/>
                             <constraint firstItem="8Ny-WW-qhh" firstAttribute="leading" secondItem="DrK-Xi-Ht6" secondAttribute="leadingMargin" id="a7G-ib-am9"/>
+                            <constraint firstItem="mc8-VG-XRx" firstAttribute="top" secondItem="1mH-AJ-LHn" secondAttribute="top" constant="19" id="bB9-fm-Vbz"/>
+                            <constraint firstItem="ERk-wW-rMZ" firstAttribute="top" secondItem="mc8-VG-XRx" secondAttribute="bottom" constant="8" id="cQG-DE-hun"/>
+                            <constraint firstItem="TLJ-6w-XTo" firstAttribute="top" secondItem="8Ny-WW-qhh" secondAttribute="bottom" constant="9" id="hCh-8S-g74"/>
                             <constraint firstItem="ERk-wW-rMZ" firstAttribute="leading" secondItem="XVn-L3-C8Q" secondAttribute="leading" id="ko9-gJ-Q0Y"/>
                             <constraint firstItem="8Ny-WW-qhh" firstAttribute="top" secondItem="XVn-L3-C8Q" secondAttribute="bottom" constant="33" id="uGg-yf-Ztb"/>
                         </constraints>
@@ -221,6 +239,7 @@
                     </view>
                     <connections>
                         <outlet property="GameCV" destination="ERk-wW-rMZ" id="XMP-4t-r1X"/>
+                        <outlet property="livesStack" destination="TLJ-6w-XTo" id="IJe-p4-2Qm"/>
                         <outlet property="roundLabel" destination="aC0-S4-cS2" id="d6I-Za-zEC"/>
                         <outlet property="scoreLabel" destination="rqU-cI-T6Y" id="Kuc-N5-eWe"/>
                         <outlet property="timeParent" destination="XVn-L3-C8Q" id="Pb9-zn-Lun"/>
