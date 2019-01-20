@@ -54,7 +54,15 @@ class GameVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
             }
             break
         case .hide:
-            
+            if Game.shared.toucheds.contains(indexPath.row) {
+                if Game.shared.contents[indexPath.row] {
+                    cell.type = .success
+                } else {
+                    cell.type = .error
+                }
+            } else {
+                cell.type = .hidden
+            }
             break
         case .final:
             
@@ -66,7 +74,8 @@ class GameVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if Game.shared.situation == .hide {
-            let success = Game.shared.click(on: indexPath.row)
+            let _ = Game.shared.click(on: indexPath.row)
+            GameCV.reloadData()
         }
     }
     
@@ -75,6 +84,7 @@ class GameVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
     }
     
     func game(situation: GameSituation) {
+        GameCV.reloadData()
         switch situation {
         case .show:
             break
