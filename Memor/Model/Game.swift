@@ -108,7 +108,7 @@ class Game {
             } else {
                 lives -= 1
                 if checkDead() {
-                  endGame()
+                    endGame()
                 }
             }
             return success
@@ -152,3 +152,4 @@ protocol GameDelegate {
     func game(score: Int, level: Int, lives: Int)
     func gameDead(shown: Bool)
 }
+

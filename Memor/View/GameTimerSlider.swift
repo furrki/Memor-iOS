@@ -28,7 +28,7 @@ class GameTimerSlider: UISlider {
     }
     
     func custom(){
-        let leftColor = #colorLiteral(red: 0.2196078449, green: 0.007843137719, blue: 0.8549019694, alpha: 1)
+        let leftColor = #colorLiteral(red: 0.5593310966, green: 0.5578248868, blue: 0.8549019694, alpha: 1)
         let rightColor = #colorLiteral(red: 0.7843137255, green: 0.8392156863, blue: 0.8980392157, alpha: 1)
         
         minimumTrackTintColor = leftColor
