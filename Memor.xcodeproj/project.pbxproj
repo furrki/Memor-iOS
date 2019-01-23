@@ -171,7 +171,6 @@
 		840793CA21F3C77B004751D5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				840793CD21F3C7DB004751D5 /* Game.swift */,
 				840793EE21F3D53E004751D5 /* Level.swift */,
 			);
 			path = Model;
@@ -191,6 +190,7 @@
 		840793CC21F3C78A004751D5 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				840793CD21F3C7DB004751D5 /* Game.swift */,
 				8407939C21F3C51E004751D5 /* AppDelegate.swift */,
 				8407939E21F3C51E004751D5 /* MainVC.swift */,
 				840793DA21F3CCBF004751D5 /* AboutVC.swift */,
